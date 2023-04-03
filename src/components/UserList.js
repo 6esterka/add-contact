@@ -1,12 +1,13 @@
 import { useEffect, useState, memo } from "react";
+import './UserList.css';
 
-export default () => {
+export default (props) => {
   const [users, setUsers] = useState([]);
-
-  window.submitForm = (name) => {
-    alert("Submiting form for " + name);
+  //Adding the user into the list
+  window.submitForm = (user) => {
+    alert("Submiting form for " + user[1]);
     users[users.length - 1].name += " (*)"; // mark the previous employee
-    users.push({ name: name });
+    users.push({id: users.length+1 ,name: user[1],age: user[2]});
     setUsers(users);
   };
 
@@ -21,13 +22,13 @@ export default () => {
   if (users.length === 0) return <></>;
 
   return (
-    <div style={{ background: "yellow", marginTop: 5 }}>
-      <h4 style={{ margin: 0, marginBottom: 20, textDecoration: "underline" }}>
+    <div className="userlist">
+      <h4>
         List of users
       </h4>
       <div>
         {users.map((d, index) => (
-          <Name data={d} />
+          <Name key={d.id} data={d} />
         ))}
       </div>
     </div>

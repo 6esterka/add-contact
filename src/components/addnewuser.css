@@ -1,0 +1,42 @@
+.newuser__controls {
+    display:flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    margin-bottom: 1em;
+    justify-content: center;
+    align-items: center;
+    max-width: 46em;
+}
+
+.newuser__controls input{
+    font-size: 1em;
+    font-weight: bold;
+    color:#424874;
+    padding:10px;
+    border-style: groove;
+    border-width:2px;
+    border-radius: 6px;
+    border-color: #DCD6F7;
+    transition:border-color 0.3s;
+}
+
+.newuser__controls input:hover{
+    border-color: #424874;
+}
+
+.newuser__controls button{
+    font-size: 1em;
+    padding: 10px 5px;
+    font-weight: bold;
+    color:#424874;
+    background-color: #DCD6F7;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s,box-shadow 0.3s;
+    border-width: 0px;
+}
+
+.newuser__controls button:hover{
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.20);
+    background-color: #A6B1E1;
+}

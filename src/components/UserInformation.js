@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-
 let renderCount = 1;
 
 const Component = ({ data }) => {

@@ -1,19 +1,26 @@
+import { useState } from "react";
 import { AddNewUser } from "./components/addnewuser";
 import Header from "./components/Header";
 import USERLIST from "./components/UserList";
 import "./styles.css";
 
 export default function App() {
+  const [addedUser,setAddedUser]=useState(null);
+  //Setting addedUser with newUser that we have getted from addnewuser controller
+  const addUserHandler=(newUser)=>{
+    setAddedUser(newUser);
+  }
+
   return (
-    <div className="App">
+    <div>
       <div>
-        <Header name={"User foo"} />
+        <Header newUserItem={addedUser} />
       </div>
       <div>
-        <AddNewUser />
+        <AddNewUser onAddUser={addUserHandler}/>
       </div>
       <div>
-        <USERLIST />
+        <USERLIST/>
       </div>
     </div>
   );

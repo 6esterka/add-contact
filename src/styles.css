@@ -1,4 +1,12 @@
-.App {
+
+
+body{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
   font-family: sans-serif;
   text-align: center;
+  background-color: #F4EEFF;
 }
